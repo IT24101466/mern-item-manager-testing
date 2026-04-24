@@ -36,8 +36,7 @@ const express = require('express');
  try {
  await Item.findByIdAndDelete(req.params.id);
  res.json({ message: 'Item deleted' });
- 4
-} catch (err) {
+ } catch (err) {
  res.status(500).json({ message: err.message });
  }
  });
